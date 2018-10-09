@@ -93,7 +93,7 @@ $RECYCLE.BIN/
 *.lnk
 
 ### ProBuilder ###
-ProCore/ProBuilder*
+ProCore/ProBuilder/*
 /Assets/ProBuilder Saved Assets*
 /Assets/ProCore/ProGrids*
 /Assets/Shaderforge*
