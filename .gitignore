@@ -92,5 +92,18 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### ProBuilder ###
+/Assets/ProBuilder Saved Assets*
+/Assets/ProCore/ProGrids*
+/Assets/Shaderforge*
+/Assets/AssetStoreTools*
+/Assets/Debug*
+/Assets/EditorVR*
+/Assets/OVR*
+/Assets/SteamVR*
+/Assets/Plugins*
+/Assets/TextMesh\ Pro*
+/Assets/ConsolePro*
+
 
 # End of https://www.gitignore.io/api/unity,macos,windows
