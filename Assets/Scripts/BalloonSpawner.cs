@@ -8,7 +8,6 @@ public class BalloonSpawner : PoolingManager
     public int poolSize;
     public float timeBetweenSpawns;
     public GameObject prefab;
-    public float minRotate, maxRotate;
 
     private List<GameObject> _balloons;
     private GameObject _activeBalloon;
@@ -25,9 +24,9 @@ public class BalloonSpawner : PoolingManager
 
     private void Update()
     {
-        if (Time.frameCount % 30 == 0)
+        if (_balloonCount < poolSize)
         {
-            if (_balloonCount < poolSize)
+            if (Time.frameCount % 30 == 0)
             {
                 StartCoroutine(SpawnBalloon());
             }
@@ -45,12 +44,9 @@ public class BalloonSpawner : PoolingManager
 
         if (_activeBalloon)
         {
-            float spin = Random.Range(minRotate, maxRotate);
-
             _activeBalloon.transform.position = spawnPoint.position;
             _activeBalloon.transform.rotation = spawnPoint.rotation;
             _activeBalloon.SetActive(true);
-            _activeBalloon.GetComponentInChildren<Rigidbody>().AddTorque(transform.forward * spin);
             ChangeBalloonCount(1);
         }
         else
