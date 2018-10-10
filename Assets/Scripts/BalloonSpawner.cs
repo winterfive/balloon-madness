@@ -36,7 +36,7 @@ public class BalloonSpawner : PoolingManager
 
 
     /*
-     * Spawns attack drones at one of the spawnPoints
+     * Spawns prefab at spawnPoint
      * void -> void
      */
     private void SpawnBalloon()
