@@ -45,6 +45,8 @@ public class BalloonSpawner : PoolingManager
 
         if (_activeBalloon)
         {
+            _activeBalloon.transform.position = spawnPoint.position;
+            _activeBalloon.transform.rotation = spawnPoint.rotation;
             _activeBalloon.SetActive(true);
             ChangeBalloonCount(1);
         }
